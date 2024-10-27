@@ -1,0 +1,284 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Encabezado y navegación */
+header {
+    background-color: #204051;
+    padding: 10px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    max-width: 100%;
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sección de productos */
+.catalogo {
+    padding: 20px;
+}
+
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.producto {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    max-width: 300px;
+}
+
+.producto-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.agregar-carrito {
+    margin-top: 10px;
+    background-color: #3b6978;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.agregar-carrito:hover {
+    background-color: #204051;
+}
+
+/* Carrito de compras */
+.carrito, .total-carrito {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#tabla-carrito th, #tabla-carrito td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.total-carrito {
+    text-align: right;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#realizar-pago {
+    background-color: springgreen;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#realizar-pago:hover {
+    background-color: #201918;
+}
+
+.informacion {
+    display: flex;
+    margin-right: 10px;
+}
+
+/* Sección de pago */
+#qrCode {
+    margin-top: 15px;
+    background-color: rgb(170, 103, 233);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+}
+
+.pago, #pago-form {
+    padding: 20px;
+    text-align: left;
+    gap: 20px;
+}
+
+#pago-form {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#form-pago {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+#form-pago input, #form-pago button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#form-pago button {
+    background-color: #3b6978;
+    color: white;
+}
+
+#form-pago button:hover {
+    background-color: #204051;
+}
+
+/* Ajustes en pantallas pequeñas */
+@media (max-width: 768px) {
+    .payment-container {
+        grid-template-columns: 1fr;
+    }
+
+    .proceder-pago {
+        order: 1;
+    }
+
+    #qrCode {
+        order: 2;
+    }
+}
+
+/* Estilos para FAQ */
+.faq {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.faq details {
+    margin-bottom: 10px;
+}
+
+.faq summary {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+}
+
+.faq p {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #444;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #3b6978;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: rgb(48, 115, 248);
+    text-decoration: none;
+}
+
+footer .social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer .social-icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+
+/* Elementos adicionales */
+.QRLOGO {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.terminos {
+    position: absolute;
+    top: 150px;
+    padding: 20px;
+    right: 540px;
+}
+
+.map-container {
+    width: 80%; /* Ajusta el ancho como desees */
+    max-width: 800px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra el contenedor */
+    text-align: center; /* Centra el texto dentro del contenedor si es necesario */
+}
+
+iframe {
+    width: 100%; /* Asegúrate de que el iframe ocupe todo el ancho del contenedor */
+    height: 500px; /* Ajusta la altura según sea necesario */
+    border: 0; /* Elimina el borde del iframe */
+}

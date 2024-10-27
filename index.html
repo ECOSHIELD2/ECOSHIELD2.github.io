@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda EcoShield</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/eco.png">
+    <!-- Integración de fuentes externas -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    
+</head>
+<body>
+
+    <!-- Encabezado con logo y navegación -->
+    <header>
+        <div class="header-container">
+            <img src="img/eco.png" alt="Logo EcoShield" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#carrito">Carrito</a></li>
+                    <li><a href="#pago">Métodos de Pago</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección principal: Catálogo de productos -->
+    <main>
+        <section id="catalogo" class="catalogo">
+            <h1>Catálogo de Productos EcoShield</h1>
+            <div class="productos">
+                <!-- Producto 1 -->
+                <div class="producto">
+                    <img src="img/vacio.jpg" alt="EcoShield - Impermeabilizante" class="producto-img">
+                    <h2>EcoShield - Impermeabilizante</h2>
+                    <p>Precio: s/ 49.99</p>
+                    <details>
+                        <summary> Ver informacion del producto</summary>
+                        ecoshield es un producto Impermeabilizante
+                    </details>
+                    <button class="agregar-carrito" data-id="1" data-precio="49.99">Añadir al Carrito</button>
+                </div>
+                <!-- Producto 2 -->
+                <div class="producto">
+                    <img src="img/vacio.jpg" alt="EcoShield - Protector UV" class="producto-img">
+                    <h2>EcoShield - Protector UV</h2>
+                    <p>Precio: s/ 34.99</p>
+                    <details>
+                        <summary> Ver informacion del producto</summary>
+                        ecoshield es un producto Impermeabilizante
+                    </details>
+                    <button class="agregar-carrito" data-id="2" data-precio="34.99">Añadir al Carrito</button>
+                </div>
+                <!-- Producto 3 -->
+                <div class="producto">
+                    <img src="img/imagen(3).jpg" alt="EcoShield - Impermeabilizante" class="producto-img">
+                    <h2>EcoShield - Impermeabilizante</h2>
+                    <p>Precio: s/ 30.00</p>
+                    <details>
+                        <summary> Ver informacion del producto</summary>
+                        Impermeabilizante de savia de nopal reforzado con fibra de sisal
+                    </details>
+                    <button class="agregar-carrito" data-id="3" data-precio="30.00">Añadir al Carrito</button>
+                </div>
+                <!-- Producto 3 -->
+                <div class="producto">
+                    <img src="img/vacio.jpg" alt="EcoShield - Aislante Térmico" class="producto-img">
+                    <h2>EcoShield - Aislante Térmico</h2>
+                    <p>Precio: s/ 59.90</p>
+                    <details>
+                        <summary> Ver informacion del producto</summary>
+                        ecoshield es un producto Impermeabilizante
+                    </details>
+                    <button class="agregar-carrito" data-id="4" data-precio="59.99">Añadir al Carrito</button>
+                </div>
+                
+                
+            </div>
+        </section>
+
+        <!-- Sección del Carrito -->
+        <section id="carrito" class="carrito">
+            <h1>Tu Carrito de Compras</h1>
+            <table id="tabla-carrito">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="total-carrito">
+                <h3>Total General: <span id="total-general">s/ 0.00</span></h3>
+                <button id="realizar-pago">Proceder al Pago</button>
+                <div id="qrCode"></div> <!-- Aquí se generará el código QR -->
+            </div>
+            <!-- Sección de pago simulada -->
+            <div id="pago-form">
+                <form id="form-pago">
+                    <label for="nombre">Nombre en la Tarjeta:</label>
+                    <input type="text" id="nombre" required>
+    
+                    <label for="numero-tarjeta">Número de Tarjeta:</label>
+                    <input type="text" id="numero-tarjeta" required>
+    
+                    <label for="fecha-exp">Fecha de Expiración:</label>
+                    <input type="month" id="fecha-exp" required>
+    
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" required>
+    
+                    <button type="submit">Pagar</button>
+                </form>
+            </div>            
+        </section>
+
+        <!-- Sección Métodos de Pago -->
+         <div class = "informacion">
+            <section id="pago" class="pago">
+                <h1>Métodos de Pago</h1>
+                <img src="img/YAPEP.png" alt="yape" class="QRLOGO">
+                <p>Aceptamos las siguientes formas de pago:</p>
+                <ul>
+                    <li>Tarjeta de Crédito/Débito (Visa, MasterCard)</li>
+                    <li>Yape</li>
+                    <li>Transferencia Bancaria</li>
+                    <li>Plin</li>
+                </ul>
+         </div>
+         <div class="container">
+            <div class="map-container">
+                <h2>Ubícanos </h2>
+                <!-- Aquí va el código de Google Maps -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d6162.0307118163!2d-79.0698457!3d-8.0725443!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMDQnMjEuMSJTIDc5wrAwNCcwMS4wIlc!5e1!3m2!1ses!2spe!4v1729963763884!5m2!1ses!2spe" 
+                    width="600" 
+                    height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+            
+        </section>
+       
+    </main>
+    <section class="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <details>
+            <summary>¿Cuánto tiempo dura la protección de EcoShield?</summary>
+            <p>La protección de EcoShield puede durar hasta 10 años si se aplica correctamente, aunque la durabilidad exacta dependerá de factores como el nivel de exposición a la intemperie y el mantenimiento de la superficie tratada.
+            </p>
+        </details>
+        <details>
+            <summary>¿Es necesario aplicar varias capas?</summary>
+            <p>En la mayoría de los casos, una sola capa es suficiente para proporcionar una protección efectiva. Sin embargo, en áreas de alta humedad o con problemas graves de filtración, recomendamos aplicar una segunda capa para maximizar la impermeabilización.
+            </p>
+        </details>
+        <details>
+            <summary>¿Cómo debo preparar la superficie antes de aplicar el impermeabilizante?</summary>
+            <p>Para asegurar una aplicación óptima, es importante que la superficie esté completamente limpia y seca. Elimina polvo, grasa, restos de pintura y cualquier material suelto, y asegúrate de reparar grietas o agujeros visibles para lograr una adherencia perfecta y una protección duradera.</p>
+        </details>
+    </section>
+   
+    <!-- Sección de Contacto -->
+<footer style="background-color: #002642; color: #ffffff; padding: 20px 0; font-family: Arial, sans-serif;">
+    <section id="contacto">
+        <h1>Contáctanos</h1>
+        <p>Teléfono: 984 831 874</p>
+        <p>Dirección: Grupo M. Arevalo 3ra. Etapa Mz. C26 Lt. 30 Nro. – La Esperanza – Trujillo – La Libertad.</p>
+        <p>Correo: contacto@ecoshield.com</p>
+    </section>
+    
+    <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 10px;">
+        <a href="#"><img src="img/tiktok.png" alt="Twitter" style="width: 24px; height: 24px;" class="social-icon"></a>
+        <a href="#"><img src="img/inst.png" alt="Instagram" style="width: 24px; height: 24px;" class="social-icon"></a>
+    </div>
+    
+    <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 10px; font-size: 14px;">
+        <a href="terms.html" style="color: #ffffff; text-decoration: none;">Términos y condiciones</a>
+        <a href="#" style="color: #ffffff; text-decoration: none;">Política de cookies</a>
+        <a href="#" style="color: #ffffff; text-decoration: none;">Política de privacidad</a>
+    </div>
+    
+    <hr style="border-color: #ffffff; width: 80%; margin: 0 auto 10px;">
+    
+    <div style="text-align: center; font-size: 12px; color: #b0b0b0;">
+        <p>&copy; TODOS LOS DERECHOS RESERVADOS</p>
+        <p>Tiendas ECOSHIELD SRL - Arevalo 3ra. Etapa Mz. C26 Lt. 30 Nro. – La Esperanza – Trujillo – La Libertad.</p>
+        <p style="float: right; margin-right: 10%; font-size: 12px; color: #ffffff;">COMPRA 100% SEGURA</p>
+    </div>
+
+</footer>
+
+        <!-- Scripts -->
+    <script>
+        // Variables
+        let carrito = [];
+        let totalGeneral = 0;
+
+        // Añadir producto al carrito
+        document.querySelectorAll('.agregar-carrito').forEach(boton => {
+            boton.addEventListener('click', function() {
+                let productoID = this.getAttribute('data-id');
+                let precio = parseFloat(this.getAttribute('data-precio'));
+                let producto = {
+                    id: productoID,
+                    nombre: this.previousElementSibling.previousElementSibling.innerText,
+                    precio: precio,
+                    cantidad: 1
+                };
+
+                carrito.push(producto);
+                actualizarCarrito();
+            });
+        });
+
+        // Actualizar carrito
+        function actualizarCarrito() {
+            const tbody = document.querySelector('#tabla-carrito tbody');
+            tbody.innerHTML = '';
+            totalGeneral = 0;
+
+            carrito.forEach((producto, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${producto.nombre}</td>
+                    <td>s/ ${producto.precio.toFixed(2)}</td>
+                    <td>1</td>
+                    <td>s/ ${(producto.precio * producto.cantidad).toFixed(2)}</td>
+                    <td><button class="eliminar" data-index="${index}">Eliminar</button></td>
+                `;
+                tbody.appendChild(row);
+
+                // Actualizar total general
+                totalGeneral += producto.precio * producto.cantidad;
+            });
+
+            document.getElementById('total-general').innerText = `s/ ${totalGeneral.toFixed(2)}`;
+        }
+
+        // Proceder al pago y generar QR
+    
+        document.getElementById('realizar-pago').addEventListener('click', function() {
+            if (totalGeneral > 0) {
+                // Generar el código QR
+                var qrCodeContainer = document.getElementById('qrCode');
+                qrCodeContainer.innerHTML = ''; // Limpiar cualquier QR previo
+                var img = document.createElement('img');
+                img.src = 'img/yape-qr.png'; // Reemplaza con la URL de tu QR de Yape
+                img.alt = 'QR para Yape';
+                img.width = 200; // Ajusta el tamaño de la imagen
+                img.height = 200;
+                qrCodeContainer.appendChild(img);
+
+                // Mostrar mensaje con el monto a pagar
+                var mensajeMonto = document.createElement('p');
+                mensajeMonto.innerText = `Paga S/ ${totalGeneral.toFixed(2)} con Yape`;
+                qrCodeContainer.appendChild(mensajeMonto);
+            } else {
+                alert('El carrito está vacío.');
+            }
+        });
+    
+        // Eliminar producto del carrito
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('eliminar')) {
+                const index = e.target.getAttribute('data-index');
+                carrito.splice(index, 1);
+                actualizarCarrito();
+            }
+        });
+    </script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
